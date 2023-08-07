@@ -1,0 +1,29 @@
+id: file:///C:/Users/COMPUTER%20LAB/Desktop/Scala-Chisel-Learning-Journey-main/src/main/scala/gcd/Lab1/chiselMSB.scala:[65..66) in Input.VirtualFile("file:///C:/Users/COMPUTER%20LAB/Desktop/Scala-Chisel-Learning-Journey-main/src/main/scala/gcd/Lab1/chiselMSB.scala", "package Lab1
+
+import chisel3._
+import chisel3.util._
+
+class (counterBits: UInt) extends Module {
+  val io = IO(new Bundle {
+    val result = Output(Bool())
+  })
+
+  var max = (1.U << counterBits)
+
+  var count = RegInit(0.U(16.W))
+
+  when(count === max) {
+    count := 0.U
+  }.otherwise {
+    count := count + 1.U
+
+  }
+
+  io.result := count(3.U)
+  println(s" counter created with max value $max ")
+
+}
+")
+file:///C:/Users/COMPUTER%20LAB/Desktop/Scala-Chisel-Learning-Journey-main/src/main/scala/gcd/Lab1/chiselMSB.scala:6: error: expected identifier; obtained lparen
+class (counterBits: UInt) extends Module {
+      ^
