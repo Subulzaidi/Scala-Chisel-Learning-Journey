@@ -1,0 +1,41 @@
+java.lang.IndexOutOfBoundsException: 0
+occurred in the presentation compiler.
+
+action parameters:
+offset: 381
+uri: file:///C:/Users/COMPUTER%20LAB/Desktop/Scala-Chisel-Learning-Journey-main/src/test/scala/gcd/Lab2/Task1Tester.scala
+text:
+package Lab1
+
+import chisel3._
+import chisel3.tester._
+import org.scalatest.FreeSpec
+import chisel3.experimental.BundleLiterals._
+
+class Task1Tester extends FreeSpec with ChiselScalatestTester {
+  "Counter Tester file" in {
+    test(new counter(3)) { b =>
+        b.io.in_A.poke(10.U)
+        b.io.in_B.poke(20.U)
+        b.io.select.poke(0.B)
+        b.io.out.expect(@@)
+
+
+
+    }
+  }
+}
+
+
+
+error stacktrace:
+scala.collection.LinearSeqOps.apply(LinearSeq.scala:131)
+	scala.collection.LinearSeqOps.apply$(LinearSeq.scala:128)
+	scala.collection.immutable.List.apply(List.scala:79)
+	dotty.tools.dotc.util.Signatures$.countParams(Signatures.scala:501)
+	dotty.tools.dotc.util.Signatures$.applyCallInfo(Signatures.scala:186)
+	dotty.tools.dotc.util.Signatures$.computeSignatureHelp(Signatures.scala:94)
+	dotty.tools.dotc.util.Signatures$.signatureHelp(Signatures.scala:63)
+	scala.meta.internal.pc.MetalsSignatures$.signatures(MetalsSignatures.scala:17)
+	scala.meta.internal.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:51)
+	scala.meta.internal.pc.ScalaPresentationCompiler.signatureHelp$$anonfun$1(ScalaPresentationCompiler.scala:371)
