@@ -8,7 +8,7 @@ class counter(counterBits: Int) extends Module {
     // val result = Output(Bool())
   })
   // val counterBits = Wire(SInt())
-  var max = ((1.U << counterBits) - 1.U).asSInt
+  var max = ((1.U << counterBits) -  1.U).asSInt
 
   var count = RegInit((0.U(4.W)).asSInt)
 
