@@ -1,0 +1,6 @@
+Assignment 
+Task no 1
+https://github.com/Subulzaidi/Scala-Chisel-Learning-Journey/blob/033c4603c644f634cbb8566e207dfc26c2bde050/src/test/scala/gcd/Lab3/AssignTask1t.scala
+ta
+task no 2
+https://github.com/Subulzaidi/Scala-Chisel-Learning-Journey/blob/169fd9c59f3562589dcda317418f297841fec0bf/src/test/scala/gcd/Lab3/ImmGTester.scala
